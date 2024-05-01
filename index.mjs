@@ -17,4 +17,6 @@ server.on('upgrade', (req, socket, head) => {
 	socket.end();
 });
 
-server.listen(process.env.PORT || 8080);
+server.listen(8080, '0.0.0.0', () => {
+    console.log('Server is running on http://0.0.0.0:8080/');
+});
